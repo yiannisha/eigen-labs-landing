@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: 'Manrope', sans-serif;
+}
+
+.w-fit-content {
+  width: fit-content;
+}
+
+.h-fit-content {
+  height: fit-content;
+}
+
+/* text-shadow effect */
+.shadow-1 {
+  text-shadow: 5px 5px 4px #77D970;
+  animation-name: shadow;
+  animation-duration: .5s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+}
+
+.shadow-2 {
+  text-shadow: 10px 10px 4px #172774;
+  animation-name: shadow;
+  animation-duration: .5s;
+  animation-delay: .1s;
+  animation-iteration-count: infinite;
+}
+
+.shadow-3 {
+  text-shadow: 15px 15px 4px #FF0075;
+  animation-name: shadow;
+  animation-duration: .5s;
+  animation-delay: .3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shadow {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .shadow-1 {
+    text-shadow: 2px 2px 4px #77D970;
+  }
+
+  .shadow-2 {
+    text-shadow: 4px 4px 4px #172774;
+  }
+
+  .shadow-3 {
+    text-shadow: 6px 6px 4px #FF0075;
+  }
+  
+}
